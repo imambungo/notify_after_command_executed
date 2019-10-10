@@ -20,8 +20,8 @@ WORKING_DIR="$(dirname ${BASH_SOURCE[0]:-${(%):-%x}})"
 # Treshold from which we start to notify about long running commands
 # this is define what is "long-running"
 # by default it is 5 seconds
-NOTIFICATION_SECONDS_THRESHOLD=60
-NOTIFICATION_IGNORE_REGEX="^(vim|ssh|screen|jupyter|ranger)"
+NOTIFICATION_SECONDS_THRESHOLD=7
+NOTIFICATION_IGNORE_REGEX="^(bash|nautilus|(.*) show|man |(.*) commit|(.*) blame |(.*)glog(.*)|glg|gb|(.*) log|eog |op |zsh|(.*) --patch|(.*) -p|gp|gd|vim|v|ssh|screen|jupyter|ranger|cpdiff(.*)|tt)"
 
 # check if preexec is available or already downloaded
 if [[ ! -f "$WORKING_DIR"/preexec.sh ]];then
